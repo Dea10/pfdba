@@ -1,5 +1,13 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio</title>
+</head>
+<body>
 
-	echo "hola php";
+<?php 
+	echo "hola php-html";
+ ?>
 
-?>
+</body>
+</html>
