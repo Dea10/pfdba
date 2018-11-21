@@ -80,33 +80,21 @@
   </table>
 </div> <!-- container -->
 <div class="container">
-  <table class="table">
     <form>
-        <tr>
-          <td>
-            <div class="form-group">
-              <input type="text" class="form-control" id="first_name" placeholder="nombre" name="nombre">
-            </div>
-          </td>
-          <td>
-            <div class="form-group">
-              <input type="text" class="form-control" id="last_name" placeholder="apellidos" name="apellidos">
-            </div>
-          </td>
-          <td>
-            <div class="form-group">
-              <input type="text" class="form-control" id="email" placeholder="email" name="email">
-            </div>
-          </td>
-          <td>
-            <div class="form-group">
-              <input type="text" class="form-control" id="tel" placeholder="teléfono" name="tel">
-            </div>
-          </td>
-        </tr>
-        <button type="submit" class="btn btn-primary">Agregar</button>
-      </form>
-  </table>
+      <div class="form-group">
+        <input type="text" class="form-control" id="first_name" placeholder="nombre" name="nombre">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="last_name" placeholder="apellidos" name="apellidos">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="email" placeholder="email" name="email">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="tel" placeholder="teléfono" name="tel">
+      </div>
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
 </div>
 
     <?php
