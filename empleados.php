@@ -62,7 +62,7 @@
 
     echo 'ya sirve chinga!1';
 
-      $sql=$conn->query('SELECT first_name, last_name, email, phone FROM owner');
+      $sql=$mbd->query('SELECT first_name, last_name, email, phone FROM owner');
       $arr=$sql->fetchAll(PDO::FETCH_ASSOC);
       foreach($arr as $owner){
         echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
