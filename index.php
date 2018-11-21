@@ -20,11 +20,12 @@
 
     try {
         $mbd = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $pass);
-        foreach($mbd->query('SELECT first_name, last_name, email from customer') as $fila) {
+        /*foreach($mbd->query('SELECT first_name, last_name, email from customer') as $fila) {
             print_r($fila);
             print '<br>';
-        }
-        $mbd = null;
+        }*/
+        //cerrar conexión
+        //$mbd = null;
     } catch (PDOException $e) {
         print "¡Error!: " . $e->getMessage() . "<br/>";
         die();
@@ -32,18 +33,21 @@
     ?>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+      <a class="navbar-brand" href="#">CarWash Tycoon</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">En vivo<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Empleados</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
