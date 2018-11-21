@@ -59,7 +59,7 @@
     <?php
       $sql=$mbd->prepare('SELECT * FROM owner');
       $sql->execute();
-      $arr=$sql->fetch(PDO::FETCH_ASSOC);
+      $arr=$sql->fetchAll();
       echo 'arreglo: ';
       echo $arr;
       foreach($arr as $owner){
@@ -67,7 +67,7 @@
         echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
       }
 
-      //getOwner($mbd);
+      getOwner($mbd);
 
       $mbd=null;
      ?>
