@@ -19,10 +19,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.php">BD<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="servicios.php">Servicios</a>
           </li>
           <li class="nav-item">
@@ -32,40 +32,16 @@
       </div>
     </nav>
 
-    <script>
-      setTimeout(function a(){ 
-        $.ajax({
-          url: "index.php",
-          context: document.body
-        }).done(function() {
-        $( this ).addClass( "done" );
-        });
-      }, 1000);
-    </script>
 
     <div class="row">
       <div class="col-sm-6">
         <div class="container">
-          <?php 
-            $fp = fopen("bdstatus.txt", "r");
-            while (!feof($fp)){
-              $linea = fgets($fp);
-              echo $linea .'<br>';
-            }
-            fclose($fp);
-          ?>
+          <p>Aquí se mostrarán los servicios.</p>
         </div> <!-- container -->
       </div> <!-- col-sm-6.1 -->
       <div class="col-sm-6">
         <div class="container">
-        <?php 
-            $fp = fopen("status.txt", "r");
-            while (!feof($fp)){
-              $linea = fgets($fp);
-              echo $linea;
-            }
-            fclose($fp);
-          ?>
+
         </div> <!-- container -->
       </div> <!-- col-sm-6.2 -->
     </div> <!-- row -->
