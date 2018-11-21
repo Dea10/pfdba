@@ -27,21 +27,25 @@
 	</nav>
 -->
     <?php 
-	   echo "hola php-html";
-   	
+      echo "hola php-html";
+   	  $usuario = 'root';
+      $pass = '';
 
-    try {
-    $mbd = new PDO('mysql:host=localhost;dbname=sakila', 'root', '');
-    foreach($mbd->query('SELECT * from actor') as $fila) {
-        print_r($fila);
-    }
-    $mbd = null;
-} catch (PDOException $e) {
-    print "¡Error!: " . $e->getMessage() . "<br/>";
-    die();
-}
+      try {
+        $mbd = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $pass);
+        foreach($mbd->query('SELECT * from actor') as $fila) {
+          print_r($fila);
+        }
+        $mbd = null;
+      
+      } catch (PDOException $e) {
+          print "¡Error!: " . $e->getMessage() . "<br/>";
+          die();
+      }
 
 ?>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
