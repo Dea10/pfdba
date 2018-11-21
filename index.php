@@ -11,7 +11,7 @@
     <title>Inicio</title>
   </head>
   <body>
-
+<!--
   	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	    <ul class="navbar-nav">
 	      <li class="nav-item active">
@@ -25,7 +25,7 @@
 	      </li>
 	    </ul>
 	</nav>
-
+-->
     <?php 
 	   echo "hola php-html";
    	
