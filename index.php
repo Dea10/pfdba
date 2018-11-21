@@ -34,17 +34,17 @@
 
     <script>
       function b(){
-      setTimeout(a=>{ 
-        $.ajax({
-          url: "bdstatus.php",
-          success: function (response) {
-            $("#bdstatus").html(response);
-          }
-        })
+        setTimeout(a=>{ 
+          $.ajax({
+            url: "bdstatus.php",
+            success: (response)=> {
+              $("#bdstatus").html(response);
+            }
+          })
+          b();
+        }, 60000);
+      }
       b();
-      }, 1000);
-    }
-    b();
     </script>
 
     <div class="row" id="bdstatus">
