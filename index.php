@@ -1,1 +1,5 @@
-echo 'hola php';
+<?php 
+
+  echo 'hola';
+
+ ?>
