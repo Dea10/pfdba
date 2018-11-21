@@ -20,24 +20,16 @@
 
     try {
         $mbd = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $pass);
-        /*foreach($mbd->query('SELECT first_name, last_name, email from customer') as $fila) {
-            print_r($fila);
-            print '<br>';
-        }*/
-        //cerrar conexión
-        //$mbd = null;
     } catch (PDOException $e) {
         print "¡Error!: " . $e->getMessage() . "<br/>";
         die();
     }
 
     function getOwner($conn) {
-      $sql = 'SELECT first_name, last_name, email, phone FROM owner';
-      foreach ($conn->query($sql) as $row) {
-        print $row['first_name'] . "\t";
-        print $row['last_name'] . "\t";
-        print $row['email'] . "\t";
-        print $row['phone'] . "\n";
+      $sql=$conn->query('SELECT first_name, last_name, email, phone FROM owner');
+      $arr=$sql->fetchAll(PDO::FETCH_ASSOC);
+      foreach($arr as $owner){
+        echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
       }
     }
     ?>
