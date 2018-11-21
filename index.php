@@ -33,6 +33,7 @@
     </nav>
 
     <script>
+      function b(){
       setTimeout(function a(){ 
         $.ajax({
           url: "bdstatus.php",
@@ -41,6 +42,8 @@
         $( this ).addClass( "done" );
         });
       }, 1000);
+    }
+    b();
     </script>
 
     <div class="row" id="bdstatus">
