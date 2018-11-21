@@ -19,7 +19,7 @@
       $pass = '';
 
     try {
-        $mbd = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $pass);
+        $mbd = new PDO('mysql:host=localhost;dbname=owner', $usuario, $pass);
     } catch (PDOException $e) {
         print "¡Error!: " . $e->getMessage() . "<br/>";
         die();
