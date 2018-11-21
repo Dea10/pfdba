@@ -37,10 +37,10 @@
       setTimeout(function a(){ 
         $.ajax({
           url: "bdstatus.php",
-          context: document.getElementById('bdstatus')
-        }).done(function() {
-        $( this ).addClass( "done" );
-        });
+          success: function (response) {
+            $("#bdstatus").html(response);
+          }
+        })
       }, 1000);
     }
     b();
