@@ -19,7 +19,7 @@
       $pass = '';
 
     try {
-        $mbd = new PDO('mysql:host=localhost;dbname=owner', $usuario, $pass);
+        $mbd = new PDO('mysql:host=localhost;dbname=carwash', $usuario, $pass);
         /*foreach($mbd->query('SELECT first_name, last_name, email from customer') as $fila) {
             print_r($fila);
             print '<br>';
