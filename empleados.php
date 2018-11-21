@@ -60,6 +60,7 @@
       
       </div>
     </nav>
+    <br>
 <div class="container">
   <table class="table table-hover">
     <thead>
@@ -73,10 +74,36 @@
     <tbody>
     <?php 
       getOwner($mbd);
+      //formulario para agregar dueños.
     ?>
+      <form>
+        <tr>
+          <td>
+            <div class="form-group">
+              <input type="text" class="form-control" id="first_name" placeholder="nombre" name="nombre">
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <input type="text" class="form-control" id="last_name" placeholder="apellidos" name="apellidos">
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <input type="text" class="form-control" id="email" placeholder="email" name="email">
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <input type="text" class="form-control" id="tel" placeholder="teléfono" name="tel">
+            </div>
+          </td>
+        </tr>
+        <button type="submit" class="btn btn-primary">Agregar</button>
+      </form>
     </tbody>
   </table>
-</div>
+</div> <!-- container -->
 
     <?php
       $mbd=null;
