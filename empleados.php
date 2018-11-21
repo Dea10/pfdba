@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Inicio</title>
+    <title>Empleados</title>
   </head>
   <body>
 
@@ -29,6 +29,16 @@
     } catch (PDOException $e) {
         print "¡Error!: " . $e->getMessage() . "<br/>";
         die();
+    }
+
+    function getOwner($conn) {
+      $sql = 'SELECT first_name, last_name, email, phone FROM owner';
+      foreach ($conn->query($sql) as $row) {
+        print $row['first_name'] . "\t";
+        print $row['last_name'] . "\t";
+        print $row['email'] . "\t";
+        print $row['phone'] . "\n";
+      }
     }
     ?>
 
@@ -54,7 +64,10 @@
       </div>
     </nav>
 
-    <?php 
+    <?php
+
+      getOwner($mbd);
+
       $mbd=null;
      ?>
 
