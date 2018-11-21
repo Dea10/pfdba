@@ -60,9 +60,10 @@
 
     echo 'ya sirve chinga!1';
 
-      $sql=$mbd->query('SELECT first_name, last_name, email, phone FROM owner');
+      $sql=$mbd->prepare('SELECT first_name, last_name, email, phone FROM owner');
+      $sql->execute();
       echo 'flag1';
-      $arr=$sql->fetchAll(PDO::FETCH_ASSOC);
+      $arr=$sql->fetchAll();
       echo 'flag2';
       foreach($arr as $owner){
         echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
