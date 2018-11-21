@@ -57,7 +57,7 @@
     </nav>
 
     <?php
-      $sql=$mbd->prepare('SELECT first_name, last_name, email, phone FROM owner');
+      $sql=$mbd->prepare('SELECT * FROM owner');
       $sql->execute();
       echo 'flag1';
       $arr=$sql->fetchAll();
