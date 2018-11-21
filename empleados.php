@@ -59,8 +59,7 @@
     <?php
       $sql=$mbd->prepare('SELECT * FROM owner');
       $sql->execute();
-      echo 'flag1';
-      $arr=$sql->fetchAll();
+      $arr=$sql->fetch(PDO::FETCH_ASSOC);
       echo 'arreglo: ';
       echo $arr;
       foreach($arr as $owner){
