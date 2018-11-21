@@ -32,8 +32,6 @@
         echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
       }
     }
-
-    echo 'ya sirve chinga!2';
     ?>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -63,7 +61,9 @@
     echo 'ya sirve chinga!1';
 
       $sql=$mbd->query('SELECT first_name, last_name, email, phone FROM owner');
+      echo 'flag1';
       $arr=$sql->fetchAll(PDO::FETCH_ASSOC);
+      echo 'flag2';
       foreach($arr as $owner){
         echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
       }
