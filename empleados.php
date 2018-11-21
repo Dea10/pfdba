@@ -29,7 +29,12 @@
       $sql=$conn->query('SELECT first_name, last_name, email, phone FROM owner');
       $arr=$sql->fetchAll(PDO::FETCH_ASSOC);
       foreach($arr as $owner){
-        echo $owner['first_name'].' '.$owner['last_name'].' '.$owner['email'].' '.$owner['email'].' '.$owner['phone'].'<br>';
+        echo '<tr>';
+          echo '<td>' . $owner['first_name'] . '</td>';
+          echo '<td>' . $owner['last_name'] . '</td>';
+          echo '<td>' . $owner['email'] . '</td>';
+          echo '<td>' . $owner['phone'] . '</td>';
+        echo '</tr>';
       }
     }
     ?>
@@ -55,6 +60,25 @@
       
       </div>
     </nav>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Email</th>
+      <th scope="col">Teléfono</th>
+    </tr>
+  </thead>
+  <tbody>
+<?php 
+  
+  getOwner($mbd);
+
+?>
+  </tbody>
+</table>
+
 
     <?php
       getOwner($mbd);
