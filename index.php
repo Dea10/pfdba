@@ -6,7 +6,7 @@
 
 try {
     $mbd = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $pass);
-    foreach($mbd->query('SELECT * from payment') as $fila) {
+    foreach($mbd->query('SELECT first_name, last_name, email from customer') as $fila) {
         print_r($fila);
         print '<br>';
     }
