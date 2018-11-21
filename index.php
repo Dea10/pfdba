@@ -5,7 +5,7 @@
   $pass = '';
 
 try {
-    $mbd = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $pass);
+    $mbd = new PDO('mysql:host=192.168.100.56;dbname=sakila', $usuario, $pass);
     foreach($mbd->query('SELECT * from actor') as $fila) {
         print_r($fila);
     }
