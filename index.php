@@ -12,26 +12,6 @@
   </head>
   <body>
 
-    <?php 
-
-      //echo 'hola <br><br>';
-      $usuario = 'root';
-      $pass = '';
-
-    try {
-        $mbd = new PDO('mysql:host=localhost;dbname=carwash', $usuario, $pass);
-        /*foreach($mbd->query('SELECT first_name, last_name, email from customer') as $fila) {
-            print_r($fila);
-            print '<br>';
-        }*/
-        //cerrar conexión
-        //$mbd = null;
-    } catch (PDOException $e) {
-        print "¡Error!: " . $e->getMessage() . "<br/>";
-        die();
-    }
-    ?>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">CarWash Tycoon</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,12 +43,6 @@
           fclose($fp);
         ?>
     </div>
-
-    <?php 
-      $mbd=null;
-     ?>
-
-
 
 
     <!-- Optional JavaScript -->
