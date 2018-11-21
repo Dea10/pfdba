@@ -76,7 +76,12 @@
       getOwner($mbd);
       //formulario para agregar dueños.
     ?>
-      <form>
+    </tbody>
+  </table>
+</div> <!-- container -->
+<div class="container">
+  <table class="table">
+    <form>
         <tr>
           <td>
             <div class="form-group">
@@ -101,9 +106,8 @@
         </tr>
         <button type="submit" class="btn btn-primary">Agregar</button>
       </form>
-    </tbody>
   </table>
-</div> <!-- container -->
+</div>
 
     <?php
       $mbd=null;
