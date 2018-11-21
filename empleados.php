@@ -67,6 +67,7 @@
         echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
       }
 
+      echo '\n\nfuncion';
       getOwner($mbd);
 
       $mbd=null;
