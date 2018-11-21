@@ -47,13 +47,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.php">En vivo<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Servicios</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="empleados.php">Solo empleados</a>
           </li>
         </ul>
@@ -88,7 +88,7 @@
         <input type="text" class="form-control" id="last_name" placeholder="apellidos" name="apellidos">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" id="email" placeholder="email" name="email">
+        <input type="email" class="form-control" id="email" placeholder="email" name="email">
       </div>
       <div class="form-group">
         <input type="text" class="form-control" id="tel" placeholder="teléfono" name="tel">
