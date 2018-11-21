@@ -66,10 +66,11 @@
       $arr=$sql->fetchAll();
       echo 'flag2';
       foreach($arr as $owner){
+        echo 'usuario: ';
         echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
       }
 
-      getOwner($mbd);
+      //getOwner($mbd);
 
       echo 'ya sirve chinga!';
 
