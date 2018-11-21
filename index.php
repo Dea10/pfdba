@@ -26,15 +26,22 @@
 	    </ul>
 	</nav>
 
-
-
-
-
-    <h1>Hello, world!</h1>
-
     <?php 
-		echo "hola php-html";
- 	?>
+	   echo "hola php-html";
+   	
+
+    try {
+    $mbd = new PDO('mysql:host=localhost;dbname=sakila', 'root', '');
+    foreach($mbd->query('SELECT * from actor') as $fila) {
+        print_r($fila);
+    }
+    $mbd = null;
+} catch (PDOException $e) {
+    print "¡Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+
+?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
