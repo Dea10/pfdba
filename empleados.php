@@ -57,22 +57,18 @@
     </nav>
 
     <?php
-
-    echo 'ya sirve chinga!1';
-
       $sql=$mbd->prepare('SELECT first_name, last_name, email, phone FROM owner');
       $sql->execute();
       echo 'flag1';
       $arr=$sql->fetchAll();
-      echo 'flag2';
+      echo 'arreglo: ';
+      echo $arr;
       foreach($arr as $owner){
         echo 'usuario: ';
         echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
       }
 
       //getOwner($mbd);
-
-      echo 'ya sirve chinga!';
 
       $mbd=null;
      ?>
