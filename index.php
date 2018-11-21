@@ -31,19 +31,29 @@
         </ul>
       </div>
     </nav>
+  <div class="container">
+      <div class="container">
+          <?php 
+            $fp = fopen("bdstatus.txt", "r");
+            while (!feof($fp)){
+              $linea = fgets($fp);
+              echo $linea;
+            }
+            fclose($fp);
+          ?>
+      </div>
 
-    <div class="container">
+      <div class="container">
         <?php 
-
-          $fp = fopen("bdstatus.txt", "r");
-          while (!feof($fp)){
-            $linea = fgets($fp);
-            echo $linea;
-          }
-          fclose($fp);
-        ?>
-    </div>
-
+            $fp = fopen("status.txt", "r");
+            while (!feof($fp)){
+              $linea = fgets($fp);
+              echo $linea;
+            }
+            fclose($fp);
+          ?>
+      </div>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
