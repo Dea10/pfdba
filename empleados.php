@@ -60,31 +60,27 @@
       
       </div>
     </nav>
-
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellidos</th>
-      <th scope="col">Email</th>
-      <th scope="col">Teléfono</th>
-    </tr>
-  </thead>
-  <tbody>
-<?php 
-  
-  getOwner($mbd);
-
-?>
-  </tbody>
-</table>
-
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Email</th>
+        <th scope="col">Teléfono</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php 
+      getOwner($mbd);
+    ?>
+    </tbody>
+  </table>
+</div>
 
     <?php
-      getOwner($mbd);
-
       $mbd=null;
-     ?>
+    ?>
 
 
     <!-- Optional JavaScript -->
