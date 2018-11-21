@@ -41,7 +41,7 @@
         
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">En vivo<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">BD<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Servicios</a>
@@ -52,11 +52,26 @@
         </ul>
       
       </div>
+
+      <div class="container">
+        <?php 
+
+          $fp = fopen("bdstatus.txt", "r");
+          while (!feof($fp)){
+            $linea = fgets($fp);
+            echo $linea;
+          }
+          fclose($fp);
+
+        ?>
+      </div>
     </nav>
 
     <?php 
       $mbd=null;
      ?>
+
+
 
 
     <!-- Optional JavaScript -->

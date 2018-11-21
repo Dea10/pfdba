@@ -48,7 +48,7 @@
         
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">En vivo<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">BD<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Servicios</a>
