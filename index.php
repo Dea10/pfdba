@@ -38,7 +38,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="index.php">BD<span class="sr-only">(current)</span></a>
@@ -50,10 +49,10 @@
             <a class="nav-link" href="empleados.php">Solo empleados</a>
           </li>
         </ul>
-      
       </div>
+    </nav>
 
-      <div class="container">
+    <div class="container">
         <?php 
 
           $fp = fopen("bdstatus.txt", "r");
@@ -62,10 +61,8 @@
             echo $linea;
           }
           fclose($fp);
-
         ?>
-      </div>
-    </nav>
+    </div>
 
     <?php 
       $mbd=null;
