@@ -29,7 +29,7 @@
       $sql=$conn->query('SELECT first_name, last_name, email, phone FROM owner');
       $arr=$sql->fetchAll(PDO::FETCH_ASSOC);
       foreach($arr as $owner){
-        echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
+        echo $owner['first_name'].' '.$owner['last_name'].' '.$owner['email'].' '.$owner['email'].' '.$owner['phone'].'<br>';
       }
     }
     ?>
@@ -57,17 +57,6 @@
     </nav>
 
     <?php
-      $sql=$mbd->prepare('SELECT * FROM owner');
-      $sql->execute();
-      $arr=$sql->fetchAll();
-      echo 'arreglo: ';
-      echo $arr;
-      foreach($arr as $owner){
-        echo 'usuario: ';
-        echo $owner['first_name'].'\t'.$owner['last_name'].'\t'.$owner['email'].'\t'.$owner['email'].'\t'.$owner['phone'].'\n';
-      }
-
-      echo '\n\nfuncion';
       getOwner($mbd);
 
       $mbd=null;
