@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Empleados</title>
+    <title>Clientes</title>
   </head>
   <body>
 
@@ -48,13 +48,13 @@
         
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">BD<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">BD status<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="servicios.php">Servicios</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="empleados.php">Solo empleados</a>
+            <a class="nav-link" href="clientes.php">Clientes</a>
           </li>
         </ul>
       

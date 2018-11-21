@@ -20,13 +20,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">BD<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">BD status<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="servicios.php">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="empleados.php">Solo empleados</a>
+            <a class="nav-link" href="clientes.php">Clientes</a>
           </li>
         </ul>
       </div>
@@ -42,7 +42,7 @@
             }
           })
           b();
-        }, 60000);
+        }, 30000);
       }
       b();
     </script>
