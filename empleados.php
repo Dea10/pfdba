@@ -66,6 +66,8 @@
 
       getOwner($mbd);
 
+      echo 'ya sirve chinga!';
+
       $mbd=null;
      ?>
 
